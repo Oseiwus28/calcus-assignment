@@ -42,7 +42,7 @@ function Calculator() {
     <div id="calculator">
       <div id="displayArea">{display}</div>
       <div id="keys">
-        <button onClick={handleClear} style={{ backgroundColor: 'rgba(252, 171, 20, 0.87)', color: 'white' }}>
+        <button onClick={handleClear} style={{ backgroundColor: 'rgba(252, 171, 20, 0.87)', color: 'white',borderColor:'transparent' }}>
           AC
         </button>
         <button className="btn" onClick={() => handleDigitClick('1')}>
@@ -87,7 +87,8 @@ function Calculator() {
         <button className="btn" onClick={() => handleOperatorClick('/')}>
           /
         </button>
-        <button className="btn">.</button>
+        <button className="btn" onClick={() => handleOperatorClick('.')} >.
+        </button>
         <button id="equal" className="btn" onClick={handleEquals}>
           =
         </button>
